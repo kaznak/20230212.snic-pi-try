@@ -1,0 +1,15 @@
+
+define :updown do |t, i, s|
+  c = scale i, s
+  play_pattern_timed c.take(5).reflect, t, release: (2*t)
+  sleep t
+  play chord(i, s), release: (4*t), amp: 2
+  sleep 2*t
+end
+
+use_synth :piano
+t = 0.125
+
+updown t, :C, :major
+updown t, :F, :minor
+updown t, :C, :major
