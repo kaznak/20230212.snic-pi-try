@@ -11,5 +11,5 @@ use_synth :piano
 t = 0.125
 
 updown t, :C, :major
-updown t, :F, :minor
+updown t, :A, :minor
 updown t, :C, :major
